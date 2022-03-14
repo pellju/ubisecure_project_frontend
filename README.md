@@ -1,3 +1,17 @@
+# Front-end for my Ubisecure job-interview-project (show the real-time location of trains)
+Front-end for the back-end I have made. Still work in progress.
+
+### ToDo:
+- Split login and registration forms (different names and ids)
+- Display the user data to a logged user
+- Middleware which checks that user has logged in and only then shows data
+- Fetch the list of trains and display them
+- Fetch the location (coordinates) of a single train and display it
+- Showing the trains on a realtime map
+- Testing
+- Finalizing (including documentation) 
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,9 +4,9 @@ const Registration = ({ username, setUsername, password, setPassword, email, set
     return (
       <div>
         <form onSubmit={handleRegistration}>
-        <div>
+          <div>
             Username:
-            <input type='text' value={username} name='Username' id='Username' onChange={({target}) => setUsername(target.value)} /> 
+            <input type='text' value={username} name='RegUsername' id='RegUsername' onChange={({target}) => setUsername(target.value)} /> 
           </div>
           <div>
             Name:
@@ -18,7 +18,7 @@ const Registration = ({ username, setUsername, password, setPassword, email, set
           </div>
           <div>
             Password:
-            <input type='password' vaLogging inlue={password} name='Password' id='Password' onChange={({target}) => setPassword(target.value)} /> 
+            <input type='password' value={password} name='RegPassword' id='RegPassword' onChange={({target}) => setPassword(target.value)} /> 
           </div>
           <button type='submit'>Register</button>
         </form>

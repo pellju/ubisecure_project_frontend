@@ -1,7 +1,9 @@
 import React, {useState} from "react"
+
 import userservice from "./services/userservice"
 import Registration from "./compnents/Registration"
 import Login from "./compnents/Login"
+import ShowData from "./compnents/AfterLogin"
 
 function App() {
 
@@ -38,16 +40,26 @@ function App() {
     } catch (e) {
       console.log('Error occured while logging in: ', e)
     }
-  } 
+  }
 
-  return (
-    <div className="App">
-      <h1>Registration:</h1>
-      <Registration username={username} setUsername={setUsername} password={password} setPassword={setPassword} email={email} setEmail={setEmail} name={name} setName={setName} handleRegistration={handleRegistration} /> 
-      <h1>Login:</h1>
-      <Login username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogin={handleLogin} />
-    </div>
-  );
+  if (user === null) {
+    return (
+      <div className="App">
+        <h1>Registration:</h1>
+        <Registration username={username} setUsername={setUsername} password={password} setPassword={setPassword} email={email} setEmail={setEmail} name={name} setName={setName} handleRegistration={handleRegistration} /> 
+        <h1>Login:</h1>
+        <Login username={username} setUsername={setUsername} password={password} setPassword={setPassword} handleLogin={handleLogin} />
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <ShowData user={user} />
+      </div>
+    );
+  }
+
+  
 }
 
 export default App;

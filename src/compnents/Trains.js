@@ -7,11 +7,15 @@ const TrainList = () => {
     const [trains, setTrains] = useState([])
 
     useEffect(() => {
-        trainservice.getTrainData().then(trainList => {
-            setTrains(trainList)
-            console.log(trains)
-        })
-    }, [])
+        const timeOutedInterval = setInterval(() => {
+            trainservice.getTrainData().then(trainList => {
+                setTrains(trainList)
+                console.log(trains)
+            })
+        }, 1000)
+        return () => clearInterval(timeOutedInterval)
+
+    })
 
     return (
         <div>
@@ -27,7 +31,7 @@ const TrainList = () => {
                 </thead>
                 <tbody>
                     {trains.map(train =>
-                        <tr>
+                        <tr key={train.id}>
                             <td>{train.name}</td>
                             <td>{train.destination}</td>
                             <td>{train.speed}</td>

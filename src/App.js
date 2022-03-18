@@ -4,6 +4,7 @@ import userservice from "./services/userservice"
 import Registration from "./compnents/Registration"
 import Login from "./compnents/Login"
 import ShowData from "./compnents/AfterLogin"
+import TrainList from "./compnents/Trains"
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
     return (
       <div>
         <ShowData user={user} />
+        <TrainList />
       </div>
     );
   }

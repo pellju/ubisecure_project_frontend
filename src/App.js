@@ -8,6 +8,7 @@ import Registration from "./compnents/Registration"
 import Login from "./compnents/Login"
 import ShowData from "./compnents/AfterLogin"
 import TrainList from "./compnents/Trains"
+import TrainsOnMap from "./compnents/TrainsOnMap"
 
 //Websocket server
 const ws = new WebSocket('ws://localhost:8082')
@@ -83,6 +84,8 @@ function App() {
       <div>
         <ShowData user={user} />
         <TrainList trains={trains} />
+        <br />
+        <TrainsOnMap trains={trains} />
       </div>
     );
   }  

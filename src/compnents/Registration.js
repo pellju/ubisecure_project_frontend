@@ -1,3 +1,4 @@
+//Registration component
 import React from "react"
 
 const Registration = ({ username, setUsername, password, setPassword, email, setEmail, name, setName, handleRegistration }) => {

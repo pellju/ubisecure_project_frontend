@@ -1,3 +1,5 @@
+//This file is used for communicating login and registration data with backend
+
 import axios from 'axios'
 const loginUrl = 'http://localhost:3001/api/login'
 const registrationUrl = 'http://localhost:3001/api/register'

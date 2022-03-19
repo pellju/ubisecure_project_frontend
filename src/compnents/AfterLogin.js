@@ -1,4 +1,4 @@
-//Component is about showing the user data and showing the train locations
+//Component is about showing the user data
 
 import React from "react";
 

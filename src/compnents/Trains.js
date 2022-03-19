@@ -1,21 +1,7 @@
-//Component is about listing trains
-import React, {useEffect, useState} from "react"
-import trainservice from "../services/trainservice"
+//Component is about showing trains and their information
+import React from "react"
 
-const TrainList = () => {
-
-    const [trains, setTrains] = useState([])
-
-    useEffect(() => {
-        const timeOutedInterval = setInterval(() => {
-            trainservice.getTrainData().then(trainList => {
-                setTrains(trainList)
-                console.log(trains)
-            })
-        }, 1000)
-        return () => clearInterval(timeOutedInterval)
-
-    })
+const TrainList = ({ trains }) => {
 
     return (
         <div>

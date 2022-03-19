@@ -2,9 +2,7 @@
 Front-end for the back-end I have made. Still work in progress.
 
 ### ToDo:
-- Registration and login forms to different pages
-- Fetch the list of trains and display them
-- Fetch the location (coordinates) of a single train and display it
+- Different useStates for registration and login
 - Showing the trains on a realtime map
 - Testing
 - Finalizing (including documentation)

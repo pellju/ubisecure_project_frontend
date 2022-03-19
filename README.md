@@ -2,8 +2,6 @@
 Front-end for the back-end I have made. Still work in progress.
 
 ### ToDo:
-- Different useStates for registration and login
-- Showing the trains on a realtime map
 - Testing
 - Finalizing (including documentation)
     - Some CSS / other UI font

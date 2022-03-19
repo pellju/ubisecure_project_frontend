@@ -1,4 +1,4 @@
-//Component is about showing the user data
+//Component is related to showing the user data
 
 import React from "react";
 

@@ -4,12 +4,12 @@
 import React, { useState, useEffect } from "react"
 
 import userservice from "./services/userservice"
-import Registration from "./compnents/Registration"
-import Login from "./compnents/Login"
-import ShowData from "./compnents/AfterLogin"
-import TrainList from "./compnents/Trains"
-import TrainsOnMap from "./compnents/TrainsOnMap"
-import ErrorMessage from "./compnents/ErrorMessage"
+import Registration from "./components/Registration"
+import Login from "./components/Login"
+import ShowData from "./components/AfterLogin"
+import TrainList from "./components/Trains"
+import TrainsOnMap from "./components/TrainsOnMap"
+import Message from "./components/Message"
 
 //Websocket server
 const ws = new WebSocket('ws://localhost:8082')
@@ -48,6 +48,7 @@ function App() {
       setRegistrationPassword('')
       setName('')
       setEmail('')
+      setMessage('Registration done successfully')
     } catch (e) {
       setMessage(e.response.data.error)
     }
@@ -74,7 +75,7 @@ function App() {
   if (user === null) {
     return (
       <div className="App">
-        <ErrorMessage message={message} />
+        <Message message={message} />
         <h1>Registration:</h1>
         <Registration username={registrationUsername} setUsername={setRegistrationUsername} password={registrationPassword} setPassword={setRegistrationPassword} email={email} setEmail={setEmail} name={name} setName={setName} handleRegistration={handleRegistration} /> 
         <h1>Login:</h1>
@@ -85,6 +86,7 @@ function App() {
     return (
       <div>
         <ShowData user={user} />
+        <br />
         <TrainList trains={trains} />
         <br />
         <TrainsOnMap trains={trains} />

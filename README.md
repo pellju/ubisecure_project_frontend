@@ -4,8 +4,7 @@ Front-end for the back-end I have made. Still work in progress.
 ### ToDo:
 - Testing
 - Finalizing (including documentation)
-    - Some CSS / other UI font
-
+    - Linting
 
 # Getting Started with Create React App
 

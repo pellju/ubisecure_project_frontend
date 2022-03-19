@@ -1,4 +1,8 @@
-const ErrorMessage = ({ message }) => {
+//Component is related to showing (error) messages when registering or logging in
+
+import React from "react";
+
+const Message = ({ message }) => {
     
     if (!message) {
         return (
@@ -13,4 +17,4 @@ const ErrorMessage = ({ message }) => {
     }
 }
 
-export default ErrorMessage
+export default Message

@@ -1,4 +1,6 @@
-describe(' Train app testing: ', function () {
+import cy from 'cypress'
+
+describe('Train app testing:', function () {
 
     it('The frontend is accessible', function () {
         cy.visit('http://localhost:3000')

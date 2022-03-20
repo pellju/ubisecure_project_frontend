@@ -51,6 +51,10 @@ function App() {
       setMessage('Registration done successfully')
     } catch (e) {
       setMessage(e.response.data.error)
+      setRegistrationUsername('')
+      setRegistrationPassword('')
+      setName('')
+      setEmail('')
     }
   }
 
@@ -66,6 +70,8 @@ function App() {
       setPassword('')
     } catch (e) {
       setMessage(e.response.data.error)
+      setUsername('')
+      setPassword('')
     }
   }
 

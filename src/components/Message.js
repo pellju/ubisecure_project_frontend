@@ -11,7 +11,7 @@ const Message = ({ message }) => {
     } else {
         return (
             <div>
-                <b>Error: {message}</b>
+                <b>{message}</b>
             </div>
         )
     }

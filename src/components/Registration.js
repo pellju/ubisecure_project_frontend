@@ -21,7 +21,7 @@ const Registration = ({ username, setUsername, password, setPassword, email, set
             Password:
             <input type='password' value={password} name='RegPassword' id='RegPassword' onChange={({target}) => setPassword(target.value)} /> 
           </div>
-          <button type='submit'>Register</button>
+          <button id='register-button' type='submit'>Register</button>
         </form>
       </div>
     )

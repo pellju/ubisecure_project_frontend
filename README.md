@@ -2,9 +2,7 @@
 Front-end for the back-end I have made. Still work in progress.
 
 ### ToDo:
-- Testing
 - Finalizing (including documentation)
-    - Linting
 
 # Getting Started with Create React App
 
